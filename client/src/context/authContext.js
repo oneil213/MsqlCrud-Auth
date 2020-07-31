@@ -3,7 +3,7 @@ import React, { createContext, useState, useEffect } from "react";
 import authService from "../services/authService";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
-import * as legoData from "../Doggy.json";
+import * as legoData from "../pops.json";
 export const AuthContext = createContext();
 
 const defaultOptions = {
@@ -40,7 +40,7 @@ export default ({ children }) => {
                 alignItems: "center",
               }}
             >
-              <Lottie options={defaultOptions} height={120} width={120} />
+              <Lottie options={defaultOptions} height={300} width={300} />
               <h2 style={{ position: "center" }}>Loading...</h2>
             </div>
           </FadeIn>

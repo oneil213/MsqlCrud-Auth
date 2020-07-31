@@ -1,7 +1,5 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "context/authContext";
-import Logout from "components/Modal/LogoutModal";
 
 // reactstrap components
 import {
@@ -20,10 +18,14 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
+// core components
+import { AuthContext } from "context/authContext";
+import Logout from "components/Modal/LogoutModal";
+
 function IndexNavbar() {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
+  const [navbarColor, setNavbarColor] = useState("navbar-transparent");
   const { isAuthenticated, user } = useContext(AuthContext);
-  const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [collapseOpen, setCollapseOpen] = useState(false);
 
   useEffect(() => {
     const updateNavbarColor = () => {

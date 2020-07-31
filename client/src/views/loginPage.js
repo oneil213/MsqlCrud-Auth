@@ -1,5 +1,5 @@
 import React, { useState, useContext, useRef, useEffect } from "react";
-import * as legoData from "../Doggy.json";
+import * as legoData from "../pops.json";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
 import ReactTextTransition, { presets } from "react-text-transition";
@@ -37,8 +37,8 @@ const defaultOptions = {
 };
 
 function LoginPage(props) {
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
+  const [firstFocus, setFirstFocus] = useState(false);
+  const [lastFocus, setLastFocus] = useState(false);
   const [user, setUser] = useState({ username: "", password: "" });
   const [message, setMessage] = useState(null);
   const authContext = useContext(AuthContext);
@@ -51,7 +51,6 @@ function LoginPage(props) {
       ...user,
       [e.target.name]: e.target.value,
     });
-
   };
 
   useEffect(() => {
@@ -114,8 +113,8 @@ function LoginPage(props) {
                 <div className="container" style={{ marginTop: "200px" }}>
                   <Lottie
                     options={defaultOptions}
-                    height={120}
-                    width={120}
+                    height={300}
+                    width={300}
                     style={{ marginTop: "150px" }}
                   />
                   <ReactTextTransition

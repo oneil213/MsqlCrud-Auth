@@ -1,7 +1,5 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "context/authContext";
-import Logout from "components/Modal/LogoutModal";
 
 // reactstrap components
 import {
@@ -20,9 +18,13 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
+// core components
+import { AuthContext } from "context/authContext";
+import Logout from "components/Modal/LogoutModal";
+
 function ExamplesNavbar() {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-warning");
-  const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [navbarColor, setNavbarColor] = useState("navbar-warning");
+  const [collapseOpen, setCollapseOpen] = useState(false);
   const { isAuthenticated, user } = useContext(AuthContext);
 
   useEffect(() => {

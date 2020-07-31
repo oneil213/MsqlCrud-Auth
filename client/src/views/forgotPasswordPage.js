@@ -24,7 +24,7 @@ import IndexNavbar from "components/Navbars/IndexNavbar";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
 import Message from "components/Message";
 import AuthService from "../services/authService";
-import * as legoData from "../Doggy.json";
+import * as legoData from "../pops.json";
 
 const defaultOptions = {
   loop: true,
@@ -119,8 +119,8 @@ function ForgotPasswordPage(props) {
               <FadeIn>
                 <Lottie
                   options={defaultOptions}
-                  height={150}
-                  width={150}
+                  height={300}
+                  width={300}
                   style={{ marginTop: "150px" }}
                 />
                 <div className="container">

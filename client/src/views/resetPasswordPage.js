@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import * as legoData from "../Doggy.json";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
 import ReactTextTransition, { presets } from "react-text-transition";
@@ -24,6 +23,7 @@ import {
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
+import * as legoData from "../pops.json";
 import Message from "components/Message";
 
 const defaultOptions = {
@@ -155,8 +155,8 @@ function ResetPasswordPage(props) {
               <FadeIn>
                 <Lottie
                   options={defaultOptions}
-                  height={150}
-                  width={150}
+                  height={300}
+                  width={300}
                   style={{ marginTop: "150px" }}
                 />
                 <div className="container">

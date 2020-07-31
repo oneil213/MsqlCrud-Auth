@@ -1,14 +1,14 @@
 /*eslint-disable*/
-import React from "react";
+import React, { createRef, useEffect } from "react";
 
 // reactstrap components
 import { Container } from "reactstrap";
 // core components
 
 function IndexHeader() {
-  let pageHeader = React.createRef();
+  let pageHeader = createRef();
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (window.innerWidth > 991) {
       const updateScroll = () => {
         let windowScrollTop = window.pageYOffset / 3;
