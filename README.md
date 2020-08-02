@@ -5,6 +5,7 @@ A simple boilerplate application for authentication and authorization using the 
 
 This Application includes some security features listed below
 
+```
 1. limitation on the body payload using body-parser
    app.use(express.json({limit: '10kb})) // This limits the data size a user can pass.
 
@@ -20,6 +21,7 @@ This Application includes some security features listed below
 
 4. Then finally helmet which is a collection of middleware functions
    app.use(helmet())
+```
 
 ## Getting Started
 
@@ -63,9 +65,9 @@ cd to the root folder
 
 ```
 
-```
 open the .env file and provide the following...
 
+```
 JWT_SECRET='your own secret'
 DB_PASSWORD='the database password you created in MySQL'
 DB_USER='your MySQL username'
@@ -76,6 +78,7 @@ EMAIL_PASSWORD='your password to the email address on ethereal'
 
 open the db.config.js file in the config folder and provide the following
 
+```
 HOST: "localhost",
 USER: process.env.DB_USER, // this remain the same
 PASSWORD: process.env.DB_PASSWORD, // this remain the same
@@ -84,19 +87,15 @@ dialect: "mysql", // this remain the same
 
 ```
 
-
-```
-
 open the email.config.js file in the config folder and provide the following
 
+```
 module.exports = {
 USER: process.env.EMAIL_ADDRESS, // no need to change anything here
 PASS: process.env.EMAIL_PASSWORD, // no need to change anything here
 };
 
 This were all set in your .env file
-
-```
 
 ```
 
@@ -107,6 +106,7 @@ Anytime you want to drop the whole table simply un-comment
 
 this
 
+```
 db.sequelize
 .sync({
 force: true,
@@ -115,9 +115,11 @@ force: true,
 console.log("Drop and Resync Database with { force: true }");
 initial();
 });
+```
 
 and comment this out
 
+```
 // db.sequelize
 // .sync()
 // .then(() => console.log("database connected"))
@@ -125,34 +127,33 @@ and comment this out
 
 ```
 
-```
-
 Open your terminal
-
-```
 
 ```
 
 type : npm install
 
 ```
+
 Cd into the client folder
+
+```
 open the .env file
 make sure your PORT setup is the same as setup in your cors-option in the server file.
 PORT=5051
 
+```
+
 open the package.json file and ensure you have your proxy set up
 
+```
  "proxy": "http://localhost:5050" // I listened on port 5050 in this case.
 
 This is needful in other not to repeat the directory all the time in the frontend request.
 It gets add automatically.
 ```
 
-```
 Open your terminal
-
-```
 
 ```
 type : npm install //make sure now you are in the client folder
@@ -161,11 +162,17 @@ type : npm install //make sure now you are in the client folder
 
 in the terminal opened for the root folder
 
+```
 type : npm start
+
+```
 
 in the terminal opened for the client folder
 
+```
 type: npm start
+
+```
 
 ## Deployment
 

@@ -1,8 +1,5 @@
 const config = require("../config/auth.config");
 const bcrypt = require("bcrypt");
-const passportConfig = require("../passport");
-const passport = require("passport");
-
 const JWT = require("jsonwebtoken");
 const db = require("../models");
 
@@ -13,7 +10,7 @@ const Op = db.Sequelize.Op;
 const signToken = (userID) => {
   return JWT.sign(
     {
-      iss: config.secret,
+      iss: "Adeola",
       sub: userID,
     },
     config.secret,
